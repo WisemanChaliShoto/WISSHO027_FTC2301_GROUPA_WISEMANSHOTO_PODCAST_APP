@@ -1,69 +1,488 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+:root{
+  background-color: #D00000;
+  color: wheat;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+   
+.header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  height: 20vh;
+  background-color: #9d0208;
+  color: wheat;
+  padding: 20px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.site-title {
+  display: flex;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.browse-preview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  
+}
+
+.carousel-title {
+  align-items: center;
+}
+
+.carousel-img {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  padding: 10px;
+  margin: 2%;
+  width: 18vw;
+  
+}
+
+.card-image {
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+
+.card {
+  background-color: #b95bec2d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0.3vw 0.3vw 0.3vw 0.3vw rgba(12, 4, 12, 0.575);
+  margin: 0.8vw;
+  width: 28vw;
+  min-width: 350px;
+  min-height: 150px;
+  padding: 0.5vw;
+  height: 15vw;
+}
+
+.card:hover{
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transform: translate3D(0,-1px,0) scale(1.03);
+  box-shadow: 0.3vw 0.3vw 0.3vw 0.3vw rgba(253, 250, 253, 0.25); 
+  
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.episodes-card:hover,.seasons-card:hover{
+  transform: translate3D(0,-1px,0) scale(1.03);
+  box-shadow: 0.3vw 0.3vw 0.3vw 0.3vw rgba(253, 250, 253, 0.25);
+}
+
+.card-info{
+  align-self: center;
+  margin-left: 1.5vw;
+  line-height: 0.5vw;
+}  
+
+.card-title{
+  align-self: center;
+  margin-left: 1.5vw;
+}
+
+.loading{
+  text-align: center;
+  margin: 5vw auto;
+  font-size: 5vw;
+  font-weight: 900;
+}
+
+.shows-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-image{
+    width: 18vw;
+    height: 18vw;
+}
+   
+.show-hero-banner{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  padding: 2vw;
+  height: 21vw;
+}
+  
+  .show-image-container{
+    flex: 1;
   }
-  a:hover {
-    color: #747bff;
+  .show-metadata{
+    flex: 2;
+  
   }
-  button {
-    background-color: #f9f9f9;
+  
+.show-description{
+  flex: 2;
+  overflow-y: scroll;
+  max-width: 100%;
+  max-height: 100%;
+}
+  
+button{
+  width: 65px;
+  height: 25px;
+  margin: 1vw;
+}
+
+.image-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a125400;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+  .image-button img {
+    height: 40px;
   }
+
+.nav-icon{
+  display: flex;
+}
+
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  height: 62px;
+}
+  
+  .navbar .nav-container a:hover{
+      font-weight: bolder;
+      color: #ffffff;
+
+  }
+  
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+    color: #ffffff;
+
+  }
+  
+  .nav-container .checkbox {
+    position: relative;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+    color: #ffffff;
+
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar{
+    display: flex;
+    
+  }
+  
+  
+  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+  
+  .search-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #124354;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .search-button img {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  
+  .description-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 1vw 1vw 1vw 0.3vw;
+    top: 0vw;
+  }
+  
+  .description-paragraph{
+    padding: 0 1vw;
+  }
+  
+  /**********************media-queries******************** */
+  @media screen and (max-width: 376px) {
+  
+    .show-hero-banner{
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      height: auto;
+    }
+    
+  
+    .show-image-container{
+      flex: 1;
+      margin: 2px;
+    }
+    .show-metadata{
+      flex: 1;
+      margin: 2px;
+      text-align: center;
+    
+    }
+    
+    .show-description{
+      flex: 1;
+      max-width: 150px;
+    }
+  
+  
+  }
+  
+  @media screen and (max-width: 426px) {
+  
+    .show-hero-banner{
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      height: auto;
+    }
+  
+    .show-image-container{
+      flex: 1;
+      margin: 2px;
+    }
+    .show-metadata{
+      flex: 1;
+      margin: 2px;
+      text-align: center;
+    
+    }
+    
+    .show-description{
+      flex: 1;
+      max-width: 200px;
+    }
+  
+  
+  }
+  
+  .show-seasons{
+    background: #67228056;
+    text-align: center;
+  }
+  
+  
+
+  .seasons-card{
+    display: flex;
+    margin: 1vw 3vw;
+    width: 25vw;
+  
+    min-width: 180px;
+    background-color: white;
+  
+  
+  
+  }
+  
+  .season-image-container{
+    height: 10vw;
+  }
+  
+  .season-image-container > img{
+    width: 10vw;
+    height: 10vw;
+  
+  }
+  
+  .seasons-metadata-header{
+    margin: 0 1vw;
+    font-size: 1vw;
+  }
+  
+  .show-seasons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  .seasons-metadata-container{
+    align-self: center;
+    margin: 0 auto;
+  }
+  
+  .seasons-metadata{
+    margin: 1vw;
+  }
+
+  .seasons{
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 376px) {
+  
+    .season-image-container > img{
+    width: 110px;
+    height: 100px;
+    
+    }
+    .season-image-container{
+      height: 100px;
+      
+    }
+  
+  }
+  
+  @media screen and (max-width: 426px) {
+  
+    .show-seasons{
+      align-items: center;
+    }
+  
+    .seasons-card{
+  
+      width: 150px;
+    
+    }
+    .season-image-container > img{
+    width: 80px;
+    height: 70px;
+    
+    }
+    .season-image-container{
+      height: 70px;
+      
+    }
+  
+  
+  }
+
+  .episodes{
+    width: 100%;
+    
+  }
+  .episodes-metadata-header{
+    margin: 1vw;
+  }
+  
+  .episodes-card{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.6rem;
+    padding: 1vw;
+    margin: 1vw 3vw;
+    width: 450px;
+    height: 20vw;
+    min-width: 180px;
+    
+  }
+  
+  
+  .episodes-metadata{
+    margin: 0 auto;
+  }
+  .episodes-metadata-header{
+    text-align: center;
+  }
+  .show-episodes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10vw;
+  }
+  .episodes-metadata-container{
+    padding: 2px 15px;
+    overflow-y: scroll;
+    padding-top: 1.5vw;
+  }
+  .episode-buttons{
+    display: flex;
+    justify-content: center;
+  }
+
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: bottom;
+  bottom: 0vw;
+  padding: 5vw;
+  background: #67228056;
+
 }
