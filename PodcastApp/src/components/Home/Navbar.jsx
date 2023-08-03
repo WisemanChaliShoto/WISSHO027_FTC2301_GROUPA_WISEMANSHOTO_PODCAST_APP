@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
       <header className="header">
         <div className="site-title">
-            <img src=".\src\assets\Logo.png" width = '80px' alt="StarStream-Logo" />
+            <img src=".\src\assets\Logo.png" width = '80px' alt="Volume, Chill and Podcast Logo" />
             <h1 className="header-title"> Chill and Podcast</h1>
         </div>
         <nav>
