@@ -65,7 +65,7 @@ function App() {
       <Carousel />
       <Shows />
       <main>
-        {loading ?  <p className='loading'> <img src="./src/assets/starLogo.png" width="100px" alt="" /> Loading shows... </p> : (
+        {loading ?  <p className='loading'> <img src="./src/assets/Logo.png" width="100px" alt="" /> Loading shows... </p> : (
           <div className='shows-preview'> 
             {!selectedShow && showElements}
             {selectedShow && <ShowDetails show={selectedShow} />}
